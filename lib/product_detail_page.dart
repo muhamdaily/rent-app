@@ -141,12 +141,17 @@ class ProductDetailPage extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              CircleAvatar(
-                                radius: 17,
-                                backgroundColor: kBlack.withOpacity(0.24),
-                                child: SvgPicture.asset(
-                                  'assets/icon_arrow_back.svg',
+                              InkWell(
+                                child: CircleAvatar(
+                                  radius: 17,
+                                  backgroundColor: kBlack.withOpacity(0.24),
+                                  child: SvgPicture.asset(
+                                    'assets/icon_arrow_back.svg',
+                                  ),
                                 ),
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
                               ),
                               CircleAvatar(
                                 radius: 17,
@@ -165,7 +170,7 @@ class ProductDetailPage extends StatelessWidget {
                                 style: kRalewaySemibold.copyWith(
                                   color: kWhite,
                                   fontSize:
-                                  SizeConfig.blockSizeHorizontal! * 4.5,
+                                      SizeConfig.blockSizeHorizontal! * 4.5,
                                 ),
                               ),
                               SizedBox(
@@ -187,9 +192,9 @@ class ProductDetailPage extends StatelessWidget {
                                     children: [
                                       Container(
                                         height:
-                                        SizeConfig.blockSizeHorizontal! * 7,
+                                            SizeConfig.blockSizeHorizontal! * 7,
                                         width:
-                                        SizeConfig.blockSizeHorizontal! * 7,
+                                            SizeConfig.blockSizeHorizontal! * 7,
                                         decoration: BoxDecoration(
                                           color: kWhite.withOpacity(0.2),
                                           borderRadius: BorderRadius.circular(
@@ -197,7 +202,7 @@ class ProductDetailPage extends StatelessWidget {
                                           ),
                                         ),
                                         padding:
-                                        const EdgeInsets.all(kPadding4),
+                                            const EdgeInsets.all(kPadding4),
                                         child: SvgPicture.asset(
                                           'assets/icon_bedroom_white.svg',
                                         ),
@@ -211,23 +216,23 @@ class ProductDetailPage extends StatelessWidget {
                                         style: kRalewayRegular.copyWith(
                                           color: kWhite,
                                           fontSize:
-                                          SizeConfig.blockSizeHorizontal! *
-                                              3,
+                                              SizeConfig.blockSizeHorizontal! *
+                                                  3,
                                         ),
                                       ),
                                     ],
                                   ),
                                   SizedBox(
                                     width:
-                                    SizeConfig.blockSizeHorizontal! * 7.5,
+                                        SizeConfig.blockSizeHorizontal! * 7.5,
                                   ),
                                   Row(
                                     children: [
                                       Container(
                                         height:
-                                        SizeConfig.blockSizeHorizontal! * 7,
+                                            SizeConfig.blockSizeHorizontal! * 7,
                                         width:
-                                        SizeConfig.blockSizeHorizontal! * 7,
+                                            SizeConfig.blockSizeHorizontal! * 7,
                                         decoration: BoxDecoration(
                                           color: kWhite.withOpacity(0.2),
                                           borderRadius: BorderRadius.circular(
@@ -235,7 +240,7 @@ class ProductDetailPage extends StatelessWidget {
                                           ),
                                         ),
                                         padding:
-                                        const EdgeInsets.all(kPadding4),
+                                            const EdgeInsets.all(kPadding4),
                                         child: SvgPicture.asset(
                                           'assets/icon_bathroom_white.svg',
                                         ),
@@ -249,8 +254,8 @@ class ProductDetailPage extends StatelessWidget {
                                         style: kRalewayRegular.copyWith(
                                           color: kWhite,
                                           fontSize:
-                                          SizeConfig.blockSizeHorizontal! *
-                                              2.5,
+                                              SizeConfig.blockSizeHorizontal! *
+                                                  2.5,
                                         ),
                                       ),
                                     ],
@@ -422,12 +427,12 @@ class ProductDetailPage extends StatelessWidget {
                       child: Center(
                         child: index == 4 - 1
                             ? Text(
-                          '+5',
-                          style: kRalewayMedium.copyWith(
-                            color: kWhite,
-                            fontSize: SizeConfig.blockSizeHorizontal! * 5,
-                          ),
-                        )
+                                '+5',
+                                style: kRalewayMedium.copyWith(
+                                  color: kWhite,
+                                  fontSize: SizeConfig.blockSizeHorizontal! * 5,
+                                ),
+                              )
                             : null,
                       ),
                     ),
